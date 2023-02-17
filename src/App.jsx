@@ -29,6 +29,7 @@ const App = () => {
 
   return (
     <div className="container">
+      <h1>Random Joke Generator</h1>
       <div className="box" >
       <h4> {data.setup}</h4>
       <p> {data.delivery}</p>
