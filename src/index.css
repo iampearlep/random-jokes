@@ -38,3 +38,10 @@ button {
     color: #443C68;
     margin-top: 1rem;
 }
+@media (max-width: 600px) {
+    .box{
+        width: 80%;
+        padding: 2rem;
+        text-align: center;
+    }
+}
