@@ -10,7 +10,7 @@ const App = () => {
   
 
   const getRandomJoke = () => {
-    const jokeDataFetch = fetch(`${apiUrl}Any?format=json&idRange=0-150&blacklistFlags=nsfw%2Cracist`,jokeOptions);
+    const jokeDataFetch = fetch(`${apiUrl}Any?type=twopart&format=json&idRange=0-150&blacklistFlags=nsfw%2Cracist`,jokeOptions);
     Promise.all([jokeDataFetch])
   .then(async(response) => {
     const jokeResponse = await response[0].json();
@@ -28,10 +28,12 @@ const App = () => {
   };
 
   return (
-    <div>
-      <p> {data.setup}</p>
+    <div className="container">
+      <div className="box" >
+      <h4> {data.setup}</h4>
       <p> {data.delivery}</p>
       <button onClick={handleRefresh}>Generate Joke</button>
+    </div>
     </div>
   );
 };
